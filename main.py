@@ -351,45 +351,101 @@
 # print(p1.summary())
 # 
 # 
-class BankAccount:
-    def __init__(self, accont_number, holder_name, balance = 0):
-        self.accont_number = accont_number
-        self.holder_name = holder_name
-        self.balance = balance
+# class BankAccount:
+#     def __init__(self, accont_number, holder_name, balance = 0):
+#         self.accont_number = accont_number
+#         self.holder_name = holder_name
+#         self.balance = balance
     
-    def deposit(self, amount):
-        if  amount > 0:
-            self.balance += amount
-            print(f"Deposited ${amount}. new balance ${self.balance}")
-        else:
-            print("deposit must be positive. ")    
+#     def deposit(self, amount):
+#         if  amount > 0:
+#             self.balance += amount
+#             print(f"Deposited ${amount}. new balance ${self.balance}")
+#         else:
+#             print("deposit must be positive. ")    
             
-    def withdraw(self, amount):
-        if  0 < amount <= self.balance:
-            self.balance -= amount
-            print(f"withdraw ${amount}. new balance ${self.balance}")
-        else:
-            print("insufficient funds invalid  withdraw amount.")    
-    def display_account(self):
-        print(f"Account number: {self.accont_number}")
-        print(f"Holder name: {self.holder_name}")
-        print(f"balance: {self.balance}")
-    @classmethod 
-    def set_interest_rate(cls, new_rate):
-        if 0 <= new_rate <= 1:
-            cls.interest_rate = new_rate
-            print(f"interest rate updated to {cls.interest_rate * 100}% for all accounts. ")   
-        else:
-            print("invalid interest rate")    
-    @staticmethod
-    def is_valid_accont_number(accont_number):
-        return len(accont_number) == 10 and accont_number.isdigit()   
+#     def withdraw(self, amount):
+#         if  0 < amount <= self.balance:
+#             self.balance -= amount
+#             print(f"withdraw ${amount}. new balance ${self.balance}")
+#         else:
+#             print("insufficient funds invalid  withdraw amount.")    
+#     def display_account(self):
+#         print(f"Account number: {self.accont_number}")
+#         print(f"Holder name: {self.holder_name}")
+#         print(f"balance: {self.balance}")
+#     @classmethod 
+#     def set_interest_rate(cls, new_rate):
+#         if 0 <= new_rate <= 1:
+#             cls.interest_rate = new_rate
+#             print(f"interest rate updated to {cls.interest_rate * 100}% for all accounts. ")   
+#         else:
+#             print("invalid interest rate")    
+#     @staticmethod
+#     def is_valid_accont_number(accont_number):
+#         return len(accont_number) == 10 and accont_number.isdigit()   
 
-accounts1= BankAccount("1234556","ahmed ali", 1000)
-accounts2 = BankAccount("12345677","maryam ali", )
-# accounts1.deposit(400)
-# accounts1.withdraw(500)
-# accounts1.display_account()
-# BankAccount.set_interest_rate(0.20)
+# accounts1= BankAccount("1234556","ahmed ali", 1000)
+# accounts2 = BankAccount("12345677","maryam ali", )
+# # accounts1.deposit(400)
+# # accounts1.withdraw(500)
+# # accounts1.display_account()
+# # BankAccount.set_interest_rate(0.20)
 
-print(BankAccount.is_valid_accont_number("123411567811"))
+# print(BankAccount.is_valid_accont_number("123411567811"))
+
+class person():
+     
+    def __init__(self,name, email,age, ):
+        
+        self.name = name
+        self.age = age
+        self.email = email
+
+    def display_info(self):
+        print(f"name:{self.name}")
+        print(f"age:{self.age}")
+        print(f"email:{self.email}")
+
+
+
+class Student(person):
+
+    def __init__(self,name, email,age,subject ,studentId):
+        super().__init__(name, age, email)
+        self.subject = subject
+        self.studentId = studentId
+
+    def print_subject(self):
+        print(f"{self.name} is studying.")
+        for subject in self.subject:
+            print(subject) 
+
+    
+                   
+
+class Teacher(person):
+    def __init__(self, name, email, age, subject):
+        super().__init__(name, age, email)
+
+        # self.name = name
+        # self.age = age
+        self.subject = subject
+        # self.email = email
+
+    def teach(self):
+        print(f"{self.name} is teaching {self.subject}. ") 
+
+
+stud1 = Student("ahmed ali", 21, "ahmed@.com",['english','math'],'232')
+
+stud1.display_info()
+stud1.print_subject()
+
+teach1 = Teacher('ali ahmed',40, 'ali@gmail.com','math')
+teach1.display_info()
+teach1.teach()
+
+    
+
+                
