@@ -1,4 +1,5 @@
-message = "hello world"
 
-def greet(name):
-    return f"hello, {name}"
+
+line 1
+line 2
+line 3

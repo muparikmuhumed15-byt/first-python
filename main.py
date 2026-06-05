@@ -394,58 +394,66 @@
 
 # print(BankAccount.is_valid_accont_number("123411567811"))
 
-class person():
+# class person():
      
-    def __init__(self,name, email,age, ):
+#     def __init__(self,name, email,age, ):
         
-        self.name = name
-        self.age = age
-        self.email = email
+#         self.name = name
+#         self.age = age
+#         self.email = email
 
-    def display_info(self):
-        print(f"name:{self.name}")
-        print(f"age:{self.age}")
-        print(f"email:{self.email}")
+#     def display_info(self):
+#         print(f"name:{self.name}")
+#         print(f"age:{self.age}")
+#         print(f"email:{self.email}")
 
 
 
-class Student(person):
+# class Student(person):
 
-    def __init__(self,name, email,age,subject ,studentId):
-        super().__init__(name, age, email)
-        self.subject = subject
-        self.studentId = studentId
+#     def __init__(self,name, email,age,subject ,studentId):
+#         super().__init__(name, age, email)
+#         self.subject = subject
+#         self.studentId = studentId
 
-    def print_subject(self):
-        print(f"{self.name} is studying.")
-        for subject in self.subject:
-            print(subject) 
+#     def print_subject(self):
+#         print(f"{self.name} is studying.")
+#         for subject in self.subject:
+#             print(subject) 
 
     
                    
 
-class Teacher(person):
-    def __init__(self, name, email, age, subject):
-        super().__init__(name, age, email)
+# class Teacher(person):
+#     def __init__(self, name, email, age, subject):
+#         super().__init__(name, age, email)
 
-        # self.name = name
-        # self.age = age
-        self.subject = subject
-        # self.email = email
+#         # self.name = name
+#         # self.age = age
+#         self.subject = subject
+#         # self.email = email
 
-    def teach(self):
-        print(f"{self.name} is teaching {self.subject}. ") 
+#     def teach(self):
+#         print(f"{self.name} is teaching {self.subject}. ") 
 
 
-stud1 = Student("ahmed ali", 21, "ahmed@.com",['english','math'],'232')
+# stud1 = Student("ahmed ali", 21, "ahmed@.com",['english','math'],'232')
 
-stud1.display_info()
-stud1.print_subject()
+# stud1.display_info()
+# stud1.print_subject()
 
-teach1 = Teacher('ali ahmed',40, 'ali@gmail.com','math')
-teach1.display_info()
-teach1.teach()
+# teach1 = Teacher('ali ahmed',40, 'ali@gmail.com','math')
+# teach1.display_info()
+# teach1.teach()
 
-    
 
-                
+# file = open('mymodule.py', 'r')
+# # content = file.read()
+# print(file.read())
+# file.close()
+
+with open('mymodule.py','r') as file:
+    for line in file:
+        print(line, end=" ")
+
+      
