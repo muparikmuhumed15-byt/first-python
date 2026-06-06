@@ -452,8 +452,29 @@
 # print(file.read())
 # file.close()
 
-with open('mymodule.py','r') as file:
-    for line in file:
-        print(line, end=" ")
+# with open('mymodule.py','r') as file:
+#     for line in file:
+#         print(line, end=" ")
 
+# with open("newfile.txt","a") as file:
+#     file.write("wan ficanahay" +"\n")
+#     file.write("alxamdulilah" +"\n")
+
+while True:
+    name = input('plesse enter the full name: ')
+
+    if name.lower() == 'exit':
+       
+       break
+    else:
       
+      print(f"hello{name.title()}")
+
+      with open("friends.txt", "a") as file:
+         file.write(name.title() + "\n") 
+
+print("the name are: ")   
+
+with open("friends.txt", "r") as file:
+   for line in file:
+      print(line)
