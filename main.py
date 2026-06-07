@@ -460,21 +460,66 @@
 #     file.write("wan ficanahay" +"\n")
 #     file.write("alxamdulilah" +"\n")
 
-while True:
-    name = input('plesse enter the full name: ')
+# while True:
+#     name = input('plesse enter the full name: ')
 
-    if name.lower() == 'exit':
+#     if name.lower() == 'exit':
+       
+#        break
+#     else:
+      
+#       print(f"hello{name.title()}")
+
+#       with open("friends.txt", "a") as file:
+#          file.write(name.title() + "\n") 
+
+# print("the name are: ")   
+
+# with open("friends.txt", "r") as file:
+#    for line in file:
+#       print(line)
+
+# import csv
+
+# with open("employees.csv", "r") as csvfile:
+#     reader = csv.reader(csvfile)
+#     for row in reader:
+#         print(row[1], row[3])
+   
+# import csv
+
+
+
+# with open("person.csv", "w", newline="") as file:
+#     writer = csv.writer(file, delimiter="\t")
+#     writer.writerow(["name","age"])
+#     writer.writerow(["ali","32"])
+#     writer.writerow(["mahamed","23"])
+#     writer.writerow(["hasan","43"])
+
+# with open("person.csv", "r") as csvfile:
+#     reader = csv.DictReader(csvfile, delimiter="\t")
+#     for row in reader:
+#         print(row)   
+# 
+import csv
+friends_list= []
+friends_list.append(["firstname","lastname","telephone"])
+
+while True:
+    firstname = input("enten the firstname: ")
+    lastname = input("enten the lastname: ")
+    telephone = input("enter the telephone: ")
+    action = input("continnue yes/no: ")
+    if action.lower() == 'no':
        
        break
-    else:
-      
-      print(f"hello{name.title()}")
+    
+    
+print(friends_list)
+with open("users.csv", "w", newline="") as file:
+       writer = csv.writer(file)
+       writer.writerows(friends_list)
+    
 
-      with open("friends.txt", "a") as file:
-         file.write(name.title() + "\n") 
 
-print("the name are: ")   
-
-with open("friends.txt", "r") as file:
-   for line in file:
-      print(line)
